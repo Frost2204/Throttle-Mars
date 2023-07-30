@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="centerdiv2">
+            <div>  
+                <div class="">
+                <span>MARTIAN</span><br>
+                <span>CITIZEN VOTING PORTAL</span>
+            </div><br>
+                <table class="image-text-table-3  margin-top: 0%;">
+                    <tr>
+                        <td class="image-cell"><img src="./assist/body.svg" alt="Image"></td>
+                        <td class="text-cell">
+                            <div>
+                                <span>Citizen R1D2MT</span>
+                                <img src="./assist/logo.svg" style="height: 28px; position: relative; top: 8px;"><br>
+                                <img src="./assist/barcode.svg" alt="" style="width: 90%; position: relative; top: 8px;"><br>
+                                <span style="display: flex; position: relative; top: 9px; left: 8px;">37:26:07</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <div class="vote-section">
+                    <span id="randomTextSpan"></span><br>
+                    <!--  -->
+                    <table class="yes-no">
+                        <tr>
+                            <td class="cell">
+                                <button id="button1" onclick="changeButtonHeights()">Agree</button>
+                            </td>
+                            <td class="cell">
+                                <button id="button2" onclick="disagree()">Disagree</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+<script>
+            // Array of random messages
+            const messages = [
+              "No Harmful Contaminatio      a.) Colonial Entities must take all reasonable measures to prevent contamination of the Martian environment with terrestrial microorganisms, chemicals, or pollutants that may adversely affect the local ecosystem. b.) Stringent biosecurity measures shall be enforced for all spacecraft, equipment, and materials transported to Mars.",
+              "Preservation of Martian Environment  a.) All Colonial Entities shall adopt practices to minimize their environmental impact, including waste generation, energy consumption, and resource utilization. b.) A Mars Environmental Oversight Agency (MEOA) shall be established to monitor and assess the environmental health of the planet and provide recommendations for protection and remediation efforts.",
+              "Protected Areas a.) Designation of Protected Areas on Mars shall be made by the MEOA to safeguard regions of scientific, ecological, or cultural importance. b.) Strict regulations on activities within Protected Areas shall be enforced to preserve their integrity.",
+              "Resource Management a.) Colonial Entities shall develop and implement sustainable resource management plans to ensure responsible extraction and utilization of Martian resources. b.) Efforts shall be made to prioritize the use of local resources over importing materials from Earth.",
+            //   "Random text keeps things interesting.",
+            //   "Stay curious and keep learning!",
+            //   "Enjoy the journey of life!",
+            //   "Embrace the uncertainty.",
+            //   "Change is the only constant.",
+            //   "Smile and spread positivity!"
+            ];
+        
+            // Function to set random text in the span
+            function setRandomText() {
+              const span = document.getElementById("randomTextSpan");
+              const randomIndex = Math.floor(Math.random() * messages.length);
+              span.textContent = messages[randomIndex];
+            }
+        
+            // Call the function to set random text on page load
+            setRandomText();
+
+          </script>
+<script src="./backend.js"></script>
+<script src="./btn.js"></script>
+</body>
+</html>
