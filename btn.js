@@ -3,13 +3,13 @@ function changeButtonHeights() {
   var button2 = document.getElementById("button2");
 
   button1.style.height = height1+'px';
-  button1.innerText = `${number1}`;
+  button1.innerText = `${number1}`+'%';
   // button1.disabled = true;
   button2.classList.add("disabled");
 
 
   button2.style.height = height2+'px';
-  button2.innerText = `${number2}`;
+  button2.innerText = `${number2}`+'%';
   // button2.disabled = true;
   button2.classList.add("disabled");
   setTimeout(function() {
